@@ -1,19 +1,22 @@
 package vinod;
 
-public class Parent12 {
-    private String a;
+class Parent {
+	private int a;
+	public int getA() {
+		return a;
+	}
+	public void setA(int a) {
+		this.a = a;
+	}
+}
 
-    public String getA() {
-        return a;
-    }
+class Demo extends Parent {
 
-    public void setA(String a) {
-        this.a = a;
-    }
+	public static void main(String[] args) {
+		Demo bb = new Demo();
+		bb.setA(7);
+		int ss = bb.getA();
+		System.out.println(ss);
+	}
 
-    public static void main(String[] args) {
-        Parent12 bb = new Parent12();
-        bb.setA("Hello");
-        System.out.println(bb.getA());
-    }
 }
